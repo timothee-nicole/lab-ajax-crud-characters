@@ -74,6 +74,7 @@ window.addEventListener('load', () => {
     const cartoonValue = document.querySelector("#edit-character-form input[name='cartoon']").value
 
     const toEditValues = {nameValue,  occupationValue,  weaponValue, cartoonValue}
+
     charactersAPI.updateOneRegister(inputValue, toEditValues).then((response) => {
       console.log("response from API", response)}).catch((err) => {console.log(`There is an error :  ${err}`)})
 
@@ -82,6 +83,15 @@ window.addEventListener('load', () => {
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
+    const nameValue = document.querySelector("#new-character-form input[name='name']").value
+    const occupationValue = document.querySelector("#new-character-form input[name='occupation']").value
+    const weaponValue = document.querySelector("#new-character-form input[name='weapon']").value
+    const cartoonValue = document.querySelector("#new-character-form input[name='cartoon']").value
+    
+    const toEditValues = {nameValue,  occupationValue,  weaponValue, cartoonValue}
 
+    charactersAPI.createOneRegister(toEditValues).then((response) => {
+      console.log("response from API", response)}
+    ).catch((err) => {console.log(`There is an error :  ${err}`)})
   });
 });
