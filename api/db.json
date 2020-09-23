@@ -1,0 +1,22 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Luke Spacewalker",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "on"
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false,
+      "nameValue": "Luke Spacewalker",
+      "occupationValue": "",
+      "weaponValue": "",
+      "cartoonValue": "on"
+    }
+  ]
+}
