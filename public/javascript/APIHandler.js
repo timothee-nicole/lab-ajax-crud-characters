@@ -4,22 +4,24 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(this.BASE_URL);
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return axios.get(this.BASE_URL + "/" + id)
   }
 
-  createOneRegister () {
-
+  createOneRegister (data) {
+    return axios.create(this.BASE_URL + "/create", data)
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, data) {
+    return axios.patch(this.BASE_URL +"/" + id, data )
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return axios.delete(this.BASE_URL + "/" + id)
   }
-}
+};
+
+export default APIHandler;
